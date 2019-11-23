@@ -1,3 +1,6 @@
+const { getList, getDetail } = require('../controller/blog');
+const { SuccessModel, ErrorModel } = require('../module/resModule');
+
 const handleBlogRouter = (req, res) => {
   const method = req.method; // GET or POST
   // 这个地方的path和url的计算和user中的有重复，为了代码优化可以在app.js中，这样写
@@ -7,16 +10,17 @@ const handleBlogRouter = (req, res) => {
 
   // 获取博客列表
   if(method === 'GET' && req.path === '/api/blog/list') {
-    return {
-      msg: '这是获取博客列表的接口'
-    }
+    const author = req.query.author || ''; // 获取到传入的作者名，如果没有传入赋值为空字符串
+    const keyword = req.query.keyword || '';
+    const listData = getList(author, keyword); // 获取传入的author和keyword相匹配的博客列表
+    return new SuccessModel(listData);
   }
 
   // 获取博客详情
   if(method === 'GET' && req.path === '/api/blog/detail') {
-    return {
-      msg: '这是一个获取博客详情的接口'
-    }
+    const id = req.query.id;
+    const data = getDetail(id);
+    return new SuccessModel(data);
   }
 
   // 新建一篇博客

@@ -1,3 +1,4 @@
+const querystring = require('querystring');
 const handleBlogRouter = require('./src/router/blog');
 const handleUserRouter = require('./src/router/user');
 
@@ -7,8 +8,11 @@ const serverHandle = (req, res) => {
 
   // 获取 path
   const url = req.url;
-  // 第一次写时写成了 const req.path = url.split('?')[0];
+  // 第一次写时写成了 const req.path = url.split('?')[0]; req早就是定义好的了，为什么还要用const呢
   req.path = url.split('?')[0];
+
+  // 解析 query, 返回一个对象，对象的属性是传入得参数名，值是参数值
+  req.query = querystring.parse(url.split('?')[1]);
 
   // 处理 blog 路由
   const blogData = handleBlogRouter(req, res);
