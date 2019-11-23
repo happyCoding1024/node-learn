@@ -30,6 +30,21 @@ const server = http.createServer((req, res) => {
       JSON.stringify(resData)
     );
   }
+
+  if(method === 'POST') {
+    let postData = '';
+    req.on('data', (chunk) => {
+      // 再次提醒chunk是二进制的形式，一定要将其转换为字符串
+      postData += chunk.toString();
+    });
+    req.on('end', () => {
+      resData.postData = postData;
+      res.end(
+        // JSON.stringify(JS对象) 将一个 JS 对象转换为 JSON 字符串（本质上就是一个字符串）
+        JSON.stringify(resData)
+      )
+    });
+  }
 });
 
 // 监听端口
