@@ -1,0 +1,23 @@
+{
+  "name": "Node.js-Project",
+  "version": "1.0.0",
+  "description": "explore Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/happyCoding1024/Node.js-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/happyCoding1024/Node.js-Project/issues"
+  },
+  "homepage": "https://github.com/happyCoding1024/Node.js-Project#readme",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
