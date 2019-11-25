@@ -1,4 +1,4 @@
-class BaseMoule {
+class BaseModule {
   constructor(data, message) {
     // 传入的data应该是一个对象，message应该是一个字符串
     // 下面个if的作用是为了当只传入一个字符串时程序也能正常运行
@@ -16,14 +16,14 @@ class BaseMoule {
   }
 }
 
-class SuccessModel extends BaseMoule {
+class SuccessModule extends BaseModule {
   constructor(data, success) {
     super(data, success);
     this.errno = 0;
   }
 }
 
-class ErrorModule extends BaseMoule {
+class ErrorModule extends BaseModule {
   constructor(data, message) {
     super(data, message);
     this.errno = -1;
@@ -31,6 +31,6 @@ class ErrorModule extends BaseMoule {
 }
 
 module.exports = {
-  SuccessModel,
+  SuccessModule,
   ErrorModule
 };
