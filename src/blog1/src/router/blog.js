@@ -19,20 +19,34 @@ const handleBlogRouter = (req, res) => {
   if(method === 'GET' && req.path === '/api/blog/list') {
     const author = req.query.author || ''; // 获取到传入的作者名，如果没有传入赋值为空字符串
     const keyword = req.query.keyword || '';
-    const listData = getList(author, keyword); // 获取传入的author和keyword相匹配的博客列表
-    return new SuccessModule(listData);
+    const result = getList(author, keyword); // getList 返回一个promise对象
+
+    return result.then((listData) => {
+      return new SuccessModule(listData);
+    }, (err) => {
+      console.log(err);
+    } )
   }
 
   // 获取博客详情
   if(method === 'GET' && req.path === '/api/blog/detail') {
-    const data = getDetail(id);
-    return new SuccessModule(data);
+    const result = getDetail(id);
+    return result.then(data => {
+      return new SuccessModule(data);
+    });
   }
 
   // 新建一篇博客
   if(method === 'POST' && req.path === '/api/blog/new') {
-    const data = newBlog(blogData);
-    return new SuccessModule(data);
+
+    // 先用假数据，因为req.body 里面现在没有author
+    const author = 'zhangsan'; // 假数据，在开发登录时再改成真实数据
+    req.body.author = author;
+
+    const result = newBlog(blogData);
+    return result.then((data) => {
+      return new SuccessModule(data);
+    });
   }
 
   // 更新一篇博客
@@ -57,4 +71,6 @@ const handleBlogRouter = (req, res) => {
   }
 };
 
-module.exports = handleBlogRouter;
+module.exports = {
+  handleBlogRouter
+};

@@ -1,5 +1,5 @@
 const querystring = require('querystring');
-const handleBlogRouter = require('./src/router/blog');
+const { handleBlogRouter } = require('./src/router/blog');
 const handleUserRouter = require('./src/router/user');
 
 // 用于处理 POST data
@@ -49,13 +49,14 @@ const serverHandle = (req, res) => {
   getPostData(req).then((postData) => {
     req.body = postData;
     // 处理 blog 路由
-    const blogData = handleBlogRouter(req, res);
-    if (blogData) {
-      res.end(
-        JSON.stringify(blogData)
-      );
-      // 一次请求一般只能是一个url，所以如果是blog请求，那么处理完blog请求之后就没必要再进行user的请求了。
-      return;
+    const blogResult = handleBlogRouter(req, res);
+    if (blogResult) {
+      blogResult.then(blogData => {
+        res.end(
+          JSON.stringify(blogData)
+        );
+      });
+      return;       // 一次请求一般只能是一个url，所以如果是blog请求，那么处理完blog请求之后就没必要再进行user的请求了。
     }
 
     // 处理 user 路由
