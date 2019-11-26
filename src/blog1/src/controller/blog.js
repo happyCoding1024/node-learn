@@ -43,12 +43,42 @@ const updateBlog = (id, blogData = {}) => {
   // id 就是更新博客的id
   // blogData 是一个博客对象，包含 title, content 属性
   // 在这里仅仅先返回一个状态
-  return true;
+  const title = blogData.title;
+  const content = blogData.content;
+
+  const sql = `
+    update blogs set title='${title}',content='${content}'
+    where  id=${id};
+  `;
+
+  return exec(sql).then((updateData) => {
+    if (updateData.affectedRows > 0) {
+      return true;
+    }
+    return false;
+  });
 };
 
-const delBlog = (id) => {
+const delBlog = (id, author) => {
   // id 就是要删除博客的id
-  return true;
+  // 这个地方加上author 的作用在于防止恶意删除别人的文章，如果只有一个id
+  // 那么就可以通过将url修改成别人博客地址的方式来删除别人的文章，加了author之后，
+  // 完成登录功能之后author只能是自己的用户名。
+  const sql = `
+   delete from blogs where id ='${id}' and author = '${author}';
+  `;
+  return exec(sql).then((deleteData) => {
+    if (deleteData.affectedRows > 0) {
+      return true;
+    }
+    return false;
+  });
+
+
+
+
+
+
 };
 
 module.exports = {

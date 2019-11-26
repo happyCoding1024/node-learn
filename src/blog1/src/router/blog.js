@@ -52,22 +52,27 @@ const handleBlogRouter = (req, res) => {
   // 更新一篇博客
   if(method === 'POST' && req.path === '/api/blog/update') {
     const result = updateBlog(id, blogData);
-    if (result) {
-      // SuccessModule 中什么信息都没有传
-      return new SuccessModule();
-    } else {
-      return new ErrorModule('update fail')
-    }
+    return result.then((val) => {
+      if (val) {
+        return new SuccessModule();
+      } else {
+        return new ErrorModule('update fail')
+      }
+    });
   }
 
   // 删除一篇博客
   if(method === 'POST' && req.path === '/api/blog/delete') {
-   const result = delBlog(id);
-   if (result) {
-     return new SuccessModule();
-   } else {
-     return new ErrorModule('delete fail');
-   }
+    const author = 'zhangsan';
+    const result = delBlog(id, author);
+    return result.then((val) => {
+       if (val) {
+         return new SuccessModule();
+       } else {
+         return new ErrorModule('delete fail');
+       }
+   });
+
   }
 };
 
