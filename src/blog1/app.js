@@ -2,6 +2,17 @@ const querystring = require('querystring');
 const { handleBlogRouter } = require('./src/router/blog');
 const handleUserRouter = require('./src/router/user');
 
+// 获取cookie 的过期时间
+const getCookieExpires = () => {
+  const d = new Date(); // 获取当前时间(13位毫秒数)
+  d.setTime(d.getTime() + (24 * 60 * 60 * 1000 )); // 将 d 的时间设置为当前时间加24小时
+  console.log("d.toGMTString is", d.toGMTString());
+  return d.toGMTString();
+};
+
+// session 数据
+const SESSION_DATA = {};
+
 // 用于处理 POST data
 const getPostData = (req) => {
   const promise = new Promise((resolve, reject) => {
@@ -45,6 +56,40 @@ const serverHandle = (req, res) => {
   // 解析 query, 返回一个对象，对象的属性是传入的参数名，值是参数值
   req.query = querystring.parse(url.split('?')[1]);
 
+  // 解析 cookie
+  req.cookie = {}; // 用于存放cookie
+  const cookieStr = req.headers.cookie || ''; // 一个字符串
+  // 下面的操作是对得到的cookie做一些处理，整理成对象的形式
+  cookieStr.split(';').forEach(item => {
+   // item 的形式是 k1=v1
+    if (!item) {
+      return;
+    } else {
+      const arr = item.split('=');
+      const key = arr[0].trim(); // trim() 去掉空格
+      const val = arr[1].trim();
+      req.cookie[key] = val;
+      console.log(key, val);
+    }
+  });
+
+  // 解析session
+  let needSetCookie = false; // 是否需要设置cookie
+  let userId = req.cookie.userid;
+  if (userId) {
+    if (!SESSION_DATA[userId]) {
+      SESSION_DATA[userId] = {};
+    }
+    req.session = SESSION_DATA[userId];
+  } else {
+    // userId 是一个字符串只要保证不重复就可以
+    needSetCookie = true;
+    userId = `${Date.now()}_${Math.random()}`;
+    SESSION_DATA[userId] = {};
+    req.session = SESSION_DATA[userId];
+  }
+
+
   // 处理 postData
   getPostData(req).then((postData) => {
     req.body = postData;
@@ -52,6 +97,9 @@ const serverHandle = (req, res) => {
     const blogResult = handleBlogRouter(req, res);
     if (blogResult) {
       blogResult.then(blogData => {
+        if (needSetCookie) {
+          res.setHeader('Set-Cookie', `userid=${userId}; path=/; htppOnly; expires=${getCookieExpires()}`);
+        }
         res.end(
           JSON.stringify(blogData)
         );
@@ -63,6 +111,9 @@ const serverHandle = (req, res) => {
     const userResult  = handleUserRouter(req, res);
     if (userResult) {
       userResult.then((userData)=> {
+        if (needSetCookie) {
+          res.setHeader('Set-Cookie', `userid=${userId}; path=/; htppOnly; expires=${getCookieExpires()}`);
+        }
         res.end(
           JSON.stringify(userData)
         );

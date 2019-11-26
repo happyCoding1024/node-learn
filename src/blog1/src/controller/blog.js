@@ -8,7 +8,11 @@ const getList = (author, keyword) => {
   if (keyword) {
     sql += `and title like "%${keyword}%"`;
   }
-  sql += `order by createtime desc`;
+  // 注意在 服务端程序中使用 数据库中的变量时一定要写在 '${}'中间，
+  // 如果不是字符串那么引号可以不用写
+  // 这个地方暂时不能使用 createtime 因为并没有往里面传数据
+  // sql += `order by createytime desc`;
+  //   sql += `order by '${createtime}' desc`;
 
   return exec(sql);
 };
