@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d4f51e7-2194-4fc2-bd72-429182666c05" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/file-test/data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blog1/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/blog1/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blog1/src/db/redis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/blog1/src/db/redis.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blog1/src/router/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/blog1/src/router/blog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blog1/src/router/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/blog1/src/router/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html-test/admin.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html-test/detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html-test/edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html-test/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html-test/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/html-test/new.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mysql-test/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mysql-test/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file-test/test1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/file-test/test1.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/blog1/src/router/blog.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
-              <caret line="103" column="11" lean-forward="true" selection-start-line="103" selection-start-column="11" selection-end-line="103" selection-end-column="11" />
+              <caret line="103" column="11" selection-start-line="103" selection-start-column="11" selection-end-line="103" selection-end-column="11" />
               <folding>
                 <element signature="e#859#1640#0" />
                 <element signature="e#1712#1830#0" />
@@ -46,11 +37,29 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/file-test/test1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="474">
+              <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/file-test/data.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/blog1/src/router/user.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
-              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -68,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/src/blog1/src/db/redis.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="500">
-              <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+              <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -95,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/src/blog1/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1694">
-              <caret line="115" column="19" lean-forward="true" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+              <caret line="115" column="19" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
               <folding>
                 <element signature="e#208#405#0" />
                 <element signature="e#495#1126#0" />
@@ -182,6 +191,8 @@
         <option value="$PROJECT_DIR$/src/blog1/src/db/redis.js" />
         <option value="$PROJECT_DIR$/src/blog1/app.js" />
         <option value="$PROJECT_DIR$/src/blog1/src/router/blog.js" />
+        <option value="$PROJECT_DIR$/src/file-test/data.txt" />
+        <option value="$PROJECT_DIR$/src/file-test/test1.js" />
       </list>
     </option>
   </component>
@@ -213,30 +224,13 @@
               <item name="Node.js-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Node.js-Project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="blog1" type="462c0819:PsiDirectoryNode" />
+              <item name="file-test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Node.js-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Node.js-Project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="blog1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Node.js-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Node.js-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="blog1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Node.js-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Node.js-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="blog1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="router" type="462c0819:PsiDirectoryNode" />
+              <item name="html-test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -292,7 +286,7 @@
       <workItem from="1574468042722" duration="30195000" />
       <workItem from="1574553160332" duration="20134000" />
       <workItem from="1574639121403" duration="68586000" />
-      <workItem from="1574840430308" duration="15433000" />
+      <workItem from="1574840430308" duration="17816000" />
     </task>
     <task id="LOCAL-00001" summary="create practice">
       <created>1574505132198</created>
@@ -357,11 +351,18 @@
       <option name="project" value="LOCAL" />
       <updated>1574820871493</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="file operation">
+      <created>1574860708597</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1574860708597</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134348000" />
+    <option name="totallyTimeSpent" value="136731000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -374,8 +375,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="609" y="0" width="759" height="724" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4960212" visible="true" weight="0.32732317" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4960212" weight="0.32732317" />
       <window_info id="Structure" order="1" sideWeight="0.5039788" side_tool="true" weight="0.27083334" />
       <window_info id="Favorites" order="2" sideWeight="0.502439" side_tool="true" weight="0.13616072" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -406,7 +408,8 @@
     <MESSAGE value="MySQL basic operation" />
     <MESSAGE value="Redis" />
     <MESSAGE value="html pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="html pages" />
+    <MESSAGE value="file operation" />
+    <option name="LAST_COMMIT_MESSAGE" value="file operation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -665,7 +668,7 @@
     <entry file="file://$PROJECT_DIR$/src/blog1/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1694">
-          <caret line="115" column="19" lean-forward="true" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+          <caret line="115" column="19" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
           <folding>
             <element signature="e#208#405#0" />
             <element signature="e#495#1126#0" />
@@ -676,7 +679,7 @@
     <entry file="file://$PROJECT_DIR$/src/blog1/src/db/redis.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
-          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -690,19 +693,36 @@
     <entry file="file://$PROJECT_DIR$/src/blog1/src/router/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/file-test/data">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/blog1/src/router/blog.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
-          <caret line="103" column="11" lean-forward="true" selection-start-line="103" selection-start-column="11" selection-end-line="103" selection-end-column="11" />
+          <caret line="103" column="11" selection-start-line="103" selection-start-column="11" selection-end-line="103" selection-end-column="11" />
           <folding>
             <element signature="e#859#1640#0" />
             <element signature="e#1712#1830#0" />
             <element signature="e#2395#2778#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/file-test/data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/file-test/test1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
         </state>
       </provider>
     </entry>
