@@ -7,14 +7,14 @@ const {
 const { SuccessModule, ErrorModule } = require('../module/resModule');
 
 // 定义一个统一的登录验证函数，在更新博客，新建博客等操作之前，如果处于未登录的状态则不能进行相应的操作
-let loginStatus = false;
+// loginCheck 主要是拦截没有登录的用户，对于已经登录的用户可以不返回东西
 const loginCheck = (req) => {
   // 只有登录了之后，req.session.username 才会有值
-  console.log('req.session.username = ', req.session.username);
-  if (req.session.username) {
-    loginStatus = true;
+  if (!req.session.username) {
+    return Promise.resolve(
+      new ErrorModule('login fail, please login first')
+    )
   }
-  return loginStatus;
 };
 
 const handleBlogRouter = (req, res) => {
@@ -29,15 +29,30 @@ const handleBlogRouter = (req, res) => {
   // 获取博客列表
   if(method === 'GET' && req.path === '/api/blog/list') {
 
-    const author = req.query.author || ''; // 获取到传入的作者名，如果没有传入赋值为空字符串
+    let author = req.query.author || ''; // 获取到传入的作者名，如果没有传入赋值为空字符串
     const keyword = req.query.keyword || '';
-    const result = getList(author, keyword); // getList 返回一个promise对象
 
+    // 加一个验证，必须登录之后才可以看到博客列表而且只能看到自己的博客列表
+    if (req.query.isadmin) {
+      // 登录验证
+      const loginCheckResult = loginCheck(req);
+      if (loginCheckResult) {
+        // 未登录
+        return loginCheckResult;
+      }
+      // 已登录
+      // 强制只能查自己的博客列表
+      // 解释一下为什么下面这一条语句就能做到强制只能查询自己的博客列表，req.session.name是在用户登录时赋值的，登录时用户名是什么，它的值就是什么
+      // 客户端是没有办法改的，将这个值直接赋给author，可以保证登录的那个人可以查看自己的但是查不了别人的，因为author始终是自己
+      author = req.session.username;
+    }
+
+    const result = getList(author, keyword); // getList 返回一个promise对象
     return result.then((listData) => {
       return new SuccessModule(listData);
     }, (err) => {
       console.log(err);
-    } )
+    })
   }
 
   // 获取博客详情
@@ -51,9 +66,11 @@ const handleBlogRouter = (req, res) => {
   // 新建一篇博客
   if(method === 'POST' && req.path === '/api/blog/new') {
     // 如果未登录，则提示首先要登录
-    if(loginCheck(req) === false) {
-      console.log('please login first');
-      return ;
+    const loginCheckResult = loginCheck(req);
+    // 如果 loginCheckResult 有值说明没有登录
+    console.log('req.session.username', req.session.username);
+    if(loginCheckResult) {
+      return loginCheckResult;
     }
 
     // 先用假数据，因为req.body 里面现在没有author
@@ -68,10 +85,12 @@ const handleBlogRouter = (req, res) => {
   // 更新一篇博客
   if(method === 'POST' && req.path === '/api/blog/update') {
     // 如果未登录，则提示首先要登录
-    if(loginCheck(req) === false) {
-      console.log('please login first');
-      return;
+    const loginCheckResult = loginCheck(req);
+    // 如果 loginCheckResult 有值说明没有登录
+    if(loginCheckResult) {
+      return loginCheckResult;
     }
+
     const result = updateBlog(id, blogData);
     return result.then((val) => {
       if (val) {
@@ -83,14 +102,17 @@ const handleBlogRouter = (req, res) => {
   }
 
   // 删除一篇博客
-  // 如果未登录，则提示首先要登录
-  if(loginCheck(req) === false) {
-    console.log('please login first');
-    return;
-  }
-  if(method === 'POST' && req.path === '/api/blog/delete') {
+  if(method === 'POST' && req.path === '/api/blog/del') {
+
+    // 如果未登录，则提示首先要登录
+    const loginCheckResult = loginCheck(req);
+    // 如果 loginCheckResult 有值说明没有登录
+    if(loginCheckResult) {
+      return loginCheckResult;
+    }
+
     const author = req.session.username;
-    // 在删除文章的时候加上作者防止找到别人的进行删除
+    // 在删除文章的时候校验一下作者，只有登录的作者本人才可以删除自己的文章
     const result = delBlog(id, author);
     return result.then((val) => {
        if (val) {

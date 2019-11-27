@@ -1,6 +1,7 @@
 const querystring = require('querystring');
 const { handleBlogRouter } = require('./src/router/blog');
 const handleUserRouter = require('./src/router/user');
+const { set, get } = require('./src/db/redis');
 
 // 获取cookie 的过期时间
 const getCookieExpires = () => {
@@ -11,7 +12,7 @@ const getCookieExpires = () => {
 };
 
 // session 数据
-const SESSION_DATA = {};
+// const SESSION_DATA = {};
 
 // 用于处理 POST data
 const getPostData = (req) => {
@@ -74,27 +75,56 @@ const serverHandle = (req, res) => {
   });
 
   // 解析session
-  let needSetCookie = false; // 是否需要设置cookie
+  // 总感觉老师下面的这种写法有问题，尤其是在 else 后面，req.session都会被赋值为空对象，而req.session只有在登录时才会被赋值
+  // 那这样的话之后用户的操作 req.session 的值不都是空对象吗？那后面在更新博客等操作时利用req.session.username去验证是否登录
+  // 又有什么意义呢？
+  // let needSetCookie = false; // 是否需要设置cookie
+  // let userId = req.cookie.userid;
+  // if (userId) {
+  //   if (!SESSION_DATA[userId]) {
+  //     SESSION_DATA[userId] = {};
+  //   }
+  //   req.session = SESSION_DATA[userId];
+  // } else {
+  //   // userId 是一个字符串只要保证不重复就可以
+  //   needSetCookie = true;
+  //   userId = `${Date.now()}_${Math.random()}`;
+  //   SESSION_DATA[userId] = {};
+  //   req.session = SESSION_DATA[userId];
+  // }
+
+  // 解析 session （使用 Redis）
+  // 下面的这种逻辑能看懂，感觉符合
+  // 一个思想就是程序中使用的session和redis中存储的session要实时保持一致
+  // 程序中只需要使用session值，redis中需要存储id和session值
+  // 其实这样的话程序中的session值会不会也比较大，能不能在进行登录验证时，直接使用redis中的session值呢？
+  let needSetCookie = false;
   let userId = req.cookie.userid;
-  console.log('userId=', userId);
-  if (userId) {
-    if (!SESSION_DATA[userId]) {
-      SESSION_DATA[userId] = {};
-    }
-    req.session = SESSION_DATA[userId];
-  } else {
-    // userId 是一个字符串只要保证不重复就可以
+  if (!userId) {
     needSetCookie = true;
     userId = `${Date.now()}_${Math.random()}`;
-    SESSION_DATA[userId] = {};
-    console.log('SESSION_DATA[userId] = ', SESSION_DATA[userId]);
-    req.session = SESSION_DATA[userId];
+    // 初始化 Redis 中的 session 值
+    set(userId, {});
   }
-
-
-  // 处理 postData
-  getPostData(req).then((postData) => {
+  // 获取 session
+  req.sessionId = userId;
+  get(req.sessionId).then(sessionData => {
+    console.log('刚开始的 sessionData', sessionData);
+    if (sessionData == null) {
+      // 初始化 redis 中的session值
+      set(req.sessionId, {});
+      // 设置 session
+      req.session = {};
+      console.log('刚开始的session', req.session);
+    } else {
+      // 设置session
+      req.session = sessionData;
+    }
+    // 处理 postData
+    return getPostData(req)
+  }).then((postData) => {
     req.body = postData;
+    console.log('req.body', req.body);
     // 处理 blog 路由
     const blogResult = handleBlogRouter(req, res);
     if (blogResult) {
@@ -108,6 +138,7 @@ const serverHandle = (req, res) => {
       });
       return;       // 一次请求一般只能是一个url，所以如果是blog请求，那么处理完blog请求之后就没必要再进行user的请求了。
     }
+
 
     // 处理 user 路由
     const userResult  = handleUserRouter(req, res);

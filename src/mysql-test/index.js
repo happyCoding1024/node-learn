@@ -13,9 +13,9 @@ const con = mysql.createConnection({
 con.connect();
 
 // 执行 SQL 语句
-// const sql = 'select * from user;';
+ const sql = 'select * from user;';
 // const sql = 'update user set realname="李四2" where username="lisi";';
-const sql = 'insert into blogs (title, content, createtime, author) values ("标题C", "内容C", 1574650349170, "zhangsan");';
+//const sql = 'insert into blogs (title, content, createtime, author) values ("标题C", "内容C", 1574650349170, "zhangsan");';
 con.query(sql, (err, result) => {
   if(err) {
     console.log(err);

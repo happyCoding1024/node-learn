@@ -1,5 +1,6 @@
 const { login } = require('../controller/user');
 const { SuccessModule, ErrorModule } = require('../module/resModule');
+const { set, get } = require('../db/redis');
 
 // 获取cookie 的过期时间
 const getCookieExpires = () => {
@@ -14,21 +15,29 @@ const handleUserRouter = ((req, res) => {
   const method = req.method; // GET or POST
 
   // 登录
-  if(method === 'GET' && req.path === '/api/user/login') {
+  if(method === 'POST' && req.path === '/api/user/login') {
     const { username, password } = req.body;
     // const { username, password } =  req.query;
     const result = login(username, password);
     return result.then((data) => {
       if (data.username) {
         // 设置 session
+        // 这个地方的ewq.session.username 不能被赋值，原因不知
         req.session.username = data.username;
         req.session.realname = data.realname;
+        console.log('req.haha', req.haha);
+        console.log('data.username', data.username);
+        console.log('req.session.username', req.session.username);
+        console.log('req.sessionId', req.sessionId);
+        // 同步到 redis
+        set(req.sessionId, req.session);
+        console.log('req.session', req.session.name);
         // 操作cookie
         // path 中的根路由/ 表示所有的网站都会生效,设置根路由的cookie
         res.setHeader('Set-Cookie', `username=${data.username}; path=/; httpOnly; expires=${getCookieExpires()}`);
         return new SuccessModule();
       } else {
-        return new ErrorModule('login fail');
+        return new ErrorModule('login fail, please login again');
       }
     });
   }
