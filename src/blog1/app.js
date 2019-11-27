@@ -53,7 +53,7 @@ const serverHandle = (req, res) => {
   // 第一次写时写成了 const req.path = url.split('?')[0]; req早就是定义好的了，为什么还要用const呢
   req.path = url.split('?')[0];
 
-  // 解析 query, 返回一个对象，对象的属性是传入的参数名，值是参数值
+  // 解析 query, 返回一个对象，对象的属性是传入的参数名，值是参数值，就是在url中？后面的部分
   req.query = querystring.parse(url.split('?')[1]);
 
   // 解析 cookie
@@ -76,6 +76,7 @@ const serverHandle = (req, res) => {
   // 解析session
   let needSetCookie = false; // 是否需要设置cookie
   let userId = req.cookie.userid;
+  console.log('userId=', userId);
   if (userId) {
     if (!SESSION_DATA[userId]) {
       SESSION_DATA[userId] = {};
@@ -86,6 +87,7 @@ const serverHandle = (req, res) => {
     needSetCookie = true;
     userId = `${Date.now()}_${Math.random()}`;
     SESSION_DATA[userId] = {};
+    console.log('SESSION_DATA[userId] = ', SESSION_DATA[userId]);
     req.session = SESSION_DATA[userId];
   }
 
@@ -120,6 +122,7 @@ const serverHandle = (req, res) => {
       });
       return;
     }
+
     // 未命中路由，返回404
     // 将状态码 404 写在res的header上
     res.writeHead(404, {"content-type": "text/plain"});

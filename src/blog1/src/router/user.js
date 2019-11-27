@@ -15,18 +15,17 @@ const handleUserRouter = ((req, res) => {
 
   // 登录
   if(method === 'GET' && req.path === '/api/user/login') {
-    // const { username, password } = req.body;
-    const { username, password } =  req.query;
+    const { username, password } = req.body;
+    // const { username, password } =  req.query;
     const result = login(username, password);
     return result.then((data) => {
       if (data.username) {
         // 设置 session
         req.session.username = data.username;
         req.session.realname = data.realname;
-        console.log('req.session is ', req.session);
         // 操作cookie
         // path 中的根路由/ 表示所有的网站都会生效,设置根路由的cookie
-        res.setHeader('Set-Cookie', `username=${data.username}; path=/; htppOnly; expires=${getCookieExpires()}`);
+        res.setHeader('Set-Cookie', `username=${data.username}; path=/; httpOnly; expires=${getCookieExpires()}`);
         return new SuccessModule();
       } else {
         return new ErrorModule('login fail');
@@ -35,15 +34,15 @@ const handleUserRouter = ((req, res) => {
   }
 
   // 登录验证的测试
-  if (method === 'GET' && req.path === '/api/user/login-test') {
-    if (req.session.username) {
-      return Promise.resolve(new SuccessModule({
-        session: req.session
-      }));
-    } else {
-      return Promise.resolve(new ErrorModule('login test fail'));
-    }
-  }
+  // if (method === 'GET' && req.path === '/api/user/login-test') {
+  //   if (req.session.username) {
+  //     return Promise.resolve(new SuccessModule({
+  //       session: req.session
+  //     }));
+  //   } else {
+  //     return Promise.resolve(new ErrorModule('login test fail'));
+  //   }
+  // }
 });
 
 module.exports = handleUserRouter;
