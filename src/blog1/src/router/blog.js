@@ -73,8 +73,7 @@ const handleBlogRouter = (req, res) => {
       return loginCheckResult;
     }
 
-    // 先用假数据，因为req.body 里面现在没有author
-    const author = req.session.username; // 假数据，在开发登录时再改成真实数据
+    const author = req.session.username;
     req.body.author = author;
     const result = newBlog(blogData);
     return result.then((data) => {

@@ -26,5 +26,6 @@ function exec(sql) {
 // 注意地方不能关闭连接 con.end(); 如果在这个地方关闭连接，那么定义完 exec 函数后，就关闭连接了。
 
 module.exports = {
-  exec
+  exec,
+  escape: mysql.escape
 };
