@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/blog1/app.js" line="55" />
+    <bookmark url="file://$PROJECT_DIR$/src/blog1/app.js" line="59" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d4f51e7-2194-4fc2-bd72-429182666c05" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/blog1/src/utils/copy.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/blog1/src/utils/log.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/blog1/src/utils/readline.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blog1/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/blog1/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blog1/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/blog1/logs/access.log" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,88 +27,49 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stream-test/test1.js">
+        <entry file="file://$PROJECT_DIR$/src/blog1/src/utils/log.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="575">
+              <caret line="23" selection-start-line="23" selection-end-line="25" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/file-test/test1.js">
+        <entry file="file://$PROJECT_DIR$/src/blog1/src/config/db.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="150">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/file-test/data.txt">
+        <entry file="file://$PROJECT_DIR$/src/blog1/src/utils/copy.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+            <state relative-caret-position="75">
+              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/blog1/logs/access.log">
-          <provider selected="true" editor-type-id="LogFileEditorProvider" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/file-test/data-bak.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stream-test/data-bak.txt">
+        <entry file="file://$PROJECT_DIR$/src/blog1/src/utils/readline.js">
           <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stream-test/data.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/blog1/src/router/user.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-            </state>
-          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/blog1/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2875">
-              <caret line="115" column="19" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+            <state relative-caret-position="1250">
+              <caret line="50" column="89" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="89" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/blog1/src/controller/blog.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1850">
-              <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/blog1/logs/access.log">
+          <provider selected="true" editor-type-id="LogFileEditorProvider" />
         </entry>
       </file>
     </leaf>
@@ -173,13 +139,19 @@
         <option value="$PROJECT_DIR$/src/Redis-test/index.js" />
         <option value="$PROJECT_DIR$/src/blog1/src/router/user.js" />
         <option value="$PROJECT_DIR$/src/blog1/src/db/redis.js" />
-        <option value="$PROJECT_DIR$/src/blog1/app.js" />
         <option value="$PROJECT_DIR$/src/blog1/src/router/blog.js" />
         <option value="$PROJECT_DIR$/src/stream-test/data.txt" />
         <option value="$PROJECT_DIR$/src/stream-test/test1.js" />
         <option value="$PROJECT_DIR$/src/file-test/test1.js" />
         <option value="$PROJECT_DIR$/src/file-test/data-bak.txt" />
         <option value="$PROJECT_DIR$/src/file-test/data.txt" />
+        <option value="$PROJECT_DIR$/src/blog1/logs/ds.http" />
+        <option value="$PROJECT_DIR$/src/blog1/src/utiles/log.js" />
+        <option value="$PROJECT_DIR$/src/blog1/utils/log.js" />
+        <option value="$PROJECT_DIR$/src/blog1/app.js" />
+        <option value="$PROJECT_DIR$/src/blog1/logs/access.log" />
+        <option value="$PROJECT_DIR$/src/blog1/src/utils/copy.sh" />
+        <option value="$PROJECT_DIR$/src/blog1/src/utils/readline.js" />
       </list>
     </option>
   </component>
@@ -194,6 +166,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -212,11 +185,25 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="blog1" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Node.js-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Node.js-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="blog1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Node.js-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Node.js-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="blog1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -229,12 +216,14 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\FrontEndProject\Node.js-Project\src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\FrontEndProject\Node.js-Project\src\blog1\src\utils" />
+      <recent name="E:\FrontEndProject\Node.js-Project\src\blog1\src" />
       <recent name="E:\FrontEndProject\Node.js-Project\src\blog1\bin" />
       <recent name="E:\FrontEndProject\Node.js-Project\src\debugger-test" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\FrontEndProject\Node.js-Project\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -269,7 +258,8 @@
       <workItem from="1574639121403" duration="68586000" />
       <workItem from="1574840430308" duration="18582000" />
       <workItem from="1574898799309" duration="6745000" />
-      <workItem from="1574907525689" duration="26000" />
+      <workItem from="1574907525689" duration="4637000" />
+      <workItem from="1574914286067" duration="1607000" />
     </task>
     <task id="LOCAL-00001" summary="create practice">
       <created>1574505132198</created>
@@ -362,11 +352,18 @@
       <option name="project" value="LOCAL" />
       <updated>1574907456584</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="log create">
+      <created>1574907645830</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1574907645830</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144268000" />
+    <option name="totallyTimeSpent" value="150486000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -379,12 +376,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="605" y="0" width="763" height="728" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4960212" visible="true" weight="0.32551724" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4960212" visible="true" weight="0.32551724" />
       <window_info id="Structure" order="1" sideWeight="0.5039788" side_tool="true" weight="0.27083334" />
       <window_info id="Favorites" order="2" sideWeight="0.502439" side_tool="true" weight="0.13616072" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.55630255" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49931034" weight="0.55630255" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.50292397" weight="0.3277311" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49925596" weight="0.35532996" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -392,8 +390,8 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32436976" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3226891" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.50066227" weight="0.26554623" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="10" sideWeight="0.50074404" side_tool="true" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49655172" visible="true" weight="0.26554623" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50344825" side_tool="true" visible="true" weight="0.26554623" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -414,7 +412,8 @@
     <MESSAGE value="file operation" />
     <MESSAGE value="stream" />
     <MESSAGE value="file stream" />
-    <option name="LAST_COMMIT_MESSAGE" value="file stream" />
+    <MESSAGE value="log create" />
+    <option name="LAST_COMMIT_MESSAGE" value="log create" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -454,25 +453,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/practice/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/src/practice/1.js.http" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="44">
-            <caret line="2" selection-start-line="2" selection-end-line="2" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/debugger-test/debugger.js" />
     <entry file="file://$PROJECT_DIR$/src/debugger-test/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -569,13 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/blog1/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Typora/conf/conf.user.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -608,13 +581,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/blog1/src/config/db.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="38" column="3" lean-forward="true" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -720,27 +686,6 @@
     <entry file="file://$PROJECT_DIR$/src/stream-test/data-bak.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stream-test/data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/blog1/src/router/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/blog1/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2875">
-          <caret line="115" column="19" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/blog1/src/controller/blog.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1850">
@@ -748,9 +693,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/blog1/logs/access.log">
-      <provider editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/blog1/logs/ds.http" />
+    <entry file="file://$PROJECT_DIR$/src/blog1/src/utiles/log.js" />
+    <entry file="file://$PROJECT_DIR$/src/blog1/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog1/src/utils/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog1/src/router/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stream-test/data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog1/logs/error.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog1/logs/event.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog1/src/utils/log.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" selection-start-line="23" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog1/src/config/db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog1/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1250">
+          <caret line="50" column="89" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog1/logs/access.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog1/src/utils/copy.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog1/src/utils/readline.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
