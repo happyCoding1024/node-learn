@@ -1,4 +1,5 @@
 const { exec } = require('../db/mysql');
+const xss = require('xss');
 
 const getList = (author, keyword) => {
   let sql = `select * from blogs where 1=1`;
@@ -26,7 +27,8 @@ const getDetail = (id) => {
 
 const newBlog = (blogData = {}) => {
   // blogData 是一个博客对象，包含title，content, author属性,应该上传到数据库，然后再返回，这里先不这样做，直接返回。
-  const title = blogData.title;
+  const title = xss(blogData.title);
+  console.log('xss title is ', title);
   const content = blogData.content;
   const author = blogData.author;
   const createTime = Date.now();
