@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser'); // 解析 cookie 用到
 var logger = require('morgan'); // 记录日志用到
 const session = require('express-session');
+const RedisStore = require('connect-redis')(session);
+const redisClient = require('./db/redis');
 
 // var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
@@ -21,6 +23,21 @@ app.use(express.json()); // 类似于blog1中的 getPostData,通过这一步的�
 app.use(express.urlencoded({ extended: false })); // 在blog1中的getPostData中只考虑了JSON格式，这是不完善的，这里考虑了其它格式的PostData，经过处理之后可以通过req.body来访问
 app.use(cookieParser()); // 通过这一步的处理之后就可以使用 req.cookies. 这种形式来访问cookie中的内容了
 app.use(express.static(path.join(__dirname, 'public'))); // public 对应一些静态文件，后端不需要太关心
+
+// session
+const sessionStore = new RedisStore({
+  client: redisClient,
+
+});
+app.use(session({
+  secret: 'WJiol#23123_', // 类似于加密时的密匙
+  cookie: {
+    path: '/', // 默认配置
+    httpOnly: true, // 默认配置
+    maxAge: 24 * 60 * 60 * 1000 // maxAge是一个生效时间，这里的表示24小时
+  },
+  store: sessionStore // 以前没有store，redis会存到内存中，现在有了store，session会存到redis中
+}));
 
 // app.use('/', indexRouter); // 和 blog1 中的 handleBlogRouter 作用类似，处理的路径是根目录
 // app.use('/users', usersRouter);
