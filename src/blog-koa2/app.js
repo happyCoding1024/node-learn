@@ -4,7 +4,7 @@ const views = require('koa-views')
 const json = require('koa-json')
 const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
-const logger = require('koa-logger')
+const logger = require('koa-logger') // 注意它并不起到日志的作用，只是将console.log 控制台的输出格式变得更易阅读
 const session = require('koa-generic-session')
 const redisStore = require('koa-redis')
 const path = require('path')
@@ -14,6 +14,8 @@ const index = require('./routes/index')
 const users = require('./routes/users')
 const blog = require('./routes/blog')
 const user = require('./routes/user')
+
+const { REDIS_CONF } = require('./config/db')
 
 // error handler
 onerror(app)
@@ -41,36 +43,22 @@ app.use(async (ctx, next) => {
 })
 
 // session 部分要在注册路由之前写，因为像bolg中需要用到 session中的数值
-// app.keys = ['WJiol#23123_'] // 和express中配置session中的secret类似
-//
-// app.use(session({
-//   // 配置cookie
-//   cookie: {
-//     path: '/',
-//     httpOnly: true,
-//     maxAge: 24 * 60 * 60 * 1000
-//   },
-//
-//   // 配置 redis
-//   // 利用 stream 的概念理解，store是source，redisStore是desc，
-//   // 将session 中store 中的内容流入 redis中存储，配置redis时当然需要地址，端口等信息
-//   store: redisStore({
-//     all: '127.0.0.1:6379' // 这个应该是根据开发环境定的
-//   })
-// }))
+app.keys = ['WJiol#23123_'] // 和express中配置session中的secret类似
 
-// session 配置
-app.keys = ['WJiol#23123_']
 app.use(session({
-  // 配置 cookie
+  // 配置cookie
   cookie: {
     path: '/',
     httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000
   },
+
   // 配置 redis
+  // 利用 stream 的概念理解，store是source，redisStore是desc，
+  // 将session 中store 中的内容流入 redis中存储，配置redis时当然需要地址，端口等信息
   store: redisStore({
-    all: '127.0.0.1:6379'   // 写死本地的 redis
+    //all: '127.0.0.1:6379' // 这个应该是根据开发环境定的
+    all: `${REDIS_CONF.host}:${REDIS_CONF.host}.port` // 从配置中获取redis的地址和端口
   })
 }))
 
