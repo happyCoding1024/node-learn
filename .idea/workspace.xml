@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d4f51e7-2194-4fc2-bd72-429182666c05" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/blog-express/db/redis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/blog-express/logs/access.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/express/like-express.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/blog-express/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/blog-express/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blog-express/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/src/blog-express/bin/www" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blog-express/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/blog-express/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blog-express/middleware/loginCheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/blog-express/middleware/loginCheck.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/blog-express/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/blog-express/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/blog-express/routes/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/blog-express/routes/blog.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/blog-express/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/blog-express/routes/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/express-test/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/express-test/app.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,71 +32,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/blog-express/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+            <state relative-caret-position="50">
+              <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/blog1/src/router/blog.js">
+        <entry file="file://$PROJECT_DIR$/src/express-test/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-25">
-              <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+            <state relative-caret-position="1109">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/blog-express/routes/blog.js">
+        <entry file="file://$PROJECT_DIR$/src/lib/express/like-express.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+            <state relative-caret-position="350">
+              <caret line="86" column="42" selection-start-line="86" selection-start-column="42" selection-end-line="86" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/blog-express/bin/www">
+        <entry file="file://$PROJECT_DIR$/src/http-test/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/blog-express/routes/user.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="36" column="11" lean-forward="true" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/blog-express/db/redis.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/blog1/src/db/redis.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="10" lean-forward="true" selection-end-line="43" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/blog1/src/router/user.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="300">
+              <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -127,6 +92,7 @@
       <find>req.session</find>
       <find>alert</find>
       <find>redis</find>
+      <find>author</find>
     </findStrings>
     <dirStrings>
       <dir>E:\FrontEndProject\Node.js-Project\src\blog1\src</dir>
@@ -142,8 +108,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/practice/2.js" />
-        <option value="$PROJECT_DIR$/src/practice/debugger.js" />
         <option value="$PROJECT_DIR$/src/debugger-test/index.js" />
         <option value="$PROJECT_DIR$/src/practice/3.js" />
         <option value="$PROJECT_DIR$/src/http-test/index.js" />
@@ -176,29 +140,31 @@
         <option value="$PROJECT_DIR$/src/blog1/src/utils/copy.sh" />
         <option value="$PROJECT_DIR$/src/blog1/src/utils/readline.js" />
         <option value="$PROJECT_DIR$/src/blog1/src/db/mysql.js" />
-        <option value="$PROJECT_DIR$/src/blog1/src/router/blog.js" />
         <option value="$PROJECT_DIR$/src/blog1/src/controller/blog.js" />
         <option value="$PROJECT_DIR$/src/blog1/src/router/user.js" />
         <option value="$PROJECT_DIR$/src/blog1/src/controller/user.js" />
         <option value="$PROJECT_DIR$/src/blog1/src/utils/cryp.js" />
         <option value="$PROJECT_DIR$/src/blog1/src/blog-express/package.json" />
-        <option value="$PROJECT_DIR$/src/blog-express/package.json" />
         <option value="$PROJECT_DIR$/src/blog-express/routes/index.js" />
         <option value="$PROJECT_DIR$/src/express-test/package.json" />
         <option value="$PROJECT_DIR$/src/express-test/app1.js" />
-        <option value="$PROJECT_DIR$/src/express-test/app.js" />
         <option value="$PROJECT_DIR$/src/blog-express/utils/cryp.js" />
-        <option value="$PROJECT_DIR$/src/blog-express/routes/user.js" />
         <option value="$PROJECT_DIR$/src/blog-express/db/redis.js" />
-        <option value="$PROJECT_DIR$/src/blog-express/app.js" />
         <option value="$PROJECT_DIR$/src/blog-express/bin/www" />
+        <option value="$PROJECT_DIR$/src/blog1/src/router/blog.js" />
+        <option value="$PROJECT_DIR$/src/blog-express/middleware/loginCheck.js" />
         <option value="$PROJECT_DIR$/src/blog-express/routes/blog.js" />
+        <option value="$PROJECT_DIR$/src/blog-express/routes/user.js" />
+        <option value="$PROJECT_DIR$/src/blog-express/package.json" />
+        <option value="$PROJECT_DIR$/src/blog-express/app.js" />
+        <option value="$PROJECT_DIR$/src/express-test/app.js" />
+        <option value="$PROJECT_DIR$/src/lib/express/like-express.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="614" />
-    <option name="width" value="751" />
+    <option name="x" value="627" />
+    <option name="width" value="738" />
     <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -224,35 +190,7 @@
               <item name="Node.js-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Node.js-Project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="blog1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Node.js-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Node.js-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="blog1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Node.js-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Node.js-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="blog1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="router" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Node.js-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Node.js-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="blog-express" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Node.js-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Node.js-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="blog-express" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="http-test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -319,7 +257,8 @@
       <workItem from="1574989476464" duration="1927000" />
       <workItem from="1574991697162" duration="4000" />
       <workItem from="1574991741792" duration="141000" />
-      <workItem from="1574991928923" duration="20647000" />
+      <workItem from="1574991928923" duration="35855000" />
+      <workItem from="1575071578552" duration="1863000" />
     </task>
     <task id="LOCAL-00001" summary="create practice">
       <created>1574505132198</created>
@@ -468,11 +407,18 @@
       <option name="project" value="LOCAL" />
       <updated>1575014818560</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="connect-redis">
+      <created>1575019946691</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1575019946692</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191927000" />
+    <option name="totallyTimeSpent" value="208998000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -484,9 +430,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="614" y="0" width="751" height="728" extended-state="0" />
+    <frame x="627" y="0" width="738" height="728" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4960212" visible="true" weight="0.2805049" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4960212" weight="0.28" />
       <window_info id="Structure" order="1" sideWeight="0.5039788" side_tool="true" weight="0.27083334" />
       <window_info id="Favorites" order="2" sideWeight="0.502439" side_tool="true" weight="0.13616072" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -500,7 +447,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3226891" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49655172" weight="0.36134455" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50344825" side_tool="true" weight="0.26554623" />
-      <window_info anchor="bottom" id="TypeScript" order="11" />
+      <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32941177" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -528,7 +475,8 @@
     <MESSAGE value="create blog-express" />
     <MESSAGE value="中间件" />
     <MESSAGE value="express-session" />
-    <option name="LAST_COMMIT_MESSAGE" value="express-session" />
+    <MESSAGE value="connect-redis" />
+    <option name="LAST_COMMIT_MESSAGE" value="connect-redis" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -561,33 +509,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/file-test/test1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/file-test/data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/file-test/data-bak.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stream-test/data-bak.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/blog1/logs/ds.http" />
     <entry file="file://$PROJECT_DIR$/src/blog1/src/utiles/log.js" />
     <entry file="file://$PROJECT_DIR$/src/blog1/src/utils/package.json">
@@ -687,22 +608,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/blog-express/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/blog-express/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/blog-express/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" selection-end-line="9" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/blog-express/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -715,13 +622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/express-test/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -766,16 +666,6 @@
     <entry file="file://$PROJECT_DIR$/src/blog-express/db/mysql.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/blog-express/config/db.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/blog-express/controller/user.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/blog-express/controller/blog.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -811,10 +701,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog1/src/router/blog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#2376#2759#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog-express/controller/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="13" column="57" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="13" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/blog-express/routes/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="36" column="11" lean-forward="true" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
+        <state relative-caret-position="92">
+          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -825,24 +732,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/blog-express/app.js">
+    <entry file="file://$PROJECT_DIR$/src/blog-express/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/blog1/src/router/blog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+        <state relative-caret-position="225">
+          <caret line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/blog-express/routes/blog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+        <state relative-caret-position="419">
+          <caret line="82" column="15" lean-forward="true" selection-start-line="82" selection-start-column="15" selection-end-line="82" selection-end-column="15" />
+          <folding>
+            <element signature="e#288#1022#0" />
+            <element signature="e#1076#1208#0" />
+            <element signature="e#1325#1521#0" />
+            <element signature="e#1588#1784#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog-express/middleware/loginCheck.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog-express/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog-express/config/db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-433">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog-express/logs/access.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="100">
+          <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/http-test/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blog-express/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/express-test/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1109">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/express/like-express.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="86" column="42" selection-start-line="86" selection-start-column="42" selection-end-line="86" selection-end-column="42" />
         </state>
       </provider>
     </entry>

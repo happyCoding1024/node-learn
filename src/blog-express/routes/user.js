@@ -28,17 +28,17 @@ router.post('/login', function(req, res, next) {
 });
 
 // 登录验证
-router.get('/login-test', (req, res, next) => {
-  if (req.session.username) {
-    res.json({
-      errno: 0,
-      msg: 'login success'
-    });
-    return;
-  }
-  res.json({
-    errno: -1,
-    msg: 'please login first'
-  })
-});
+// router.get('/login-test', (req, res, next) => {
+//   if (req.session.username) {
+//     res.json({
+//       errno: 0,
+//       msg: 'login success'
+//     });
+//     return;
+//   }
+//   res.json({
+//     errno: -1,
+//     msg: 'please login first'
+//   })
+// });
 module.exports = router;
