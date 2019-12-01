@@ -4,7 +4,7 @@ const redis = require('redis');
 // 第一个参数是端口，第二个参数是主机地址
 const redisClient = redis.createClient(6379, '127.0.0.1');
 // 按照 redis 文档要先监控一下 error
-redisClient.on('error', err => {
+redisClient.on('err.log', err => {
   console.err(err);
 });
 

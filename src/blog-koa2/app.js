@@ -93,7 +93,7 @@ app.use(blog.routes(), blog.allowedMethods())
 app.use(user.routes(), user.allowedMethods())
 
 // error-handling
-app.on('error', (err, ctx) => {
+app.on('err.log', (err, ctx) => {
   console.error('server error', err, ctx)
 });
 
