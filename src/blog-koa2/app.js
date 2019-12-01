@@ -9,6 +9,7 @@ const session = require('koa-generic-session')
 const redisStore = require('koa-redis')
 const path = require('path')
 const fs = require('fs')
+const morgan = require('koa-morgan')
 
 const index = require('./routes/index')
 const users = require('./routes/users')
@@ -41,6 +42,28 @@ app.use(async (ctx, next) => {
   const ms = new Date() - start // 执行这个中间件所花费的时间
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
 })
+
+// 日志
+const ENV = process.env.NODE_ENV;
+console.log('ENV', ENV);
+if (ENV !== 'production') {
+  // 开发环境
+  // 默认的输出位置，即控制台，这样就是我们为什么会在控制台看到内容的原因
+  app.use(morgan('dev', {
+    stream: process.stdout
+  }));
+} else {
+  // 线上环境
+  const logFileName = path.join(__dirname, 'logs', 'access.log');
+  const writeStream = fs.createWriteStream(logFileName, {
+    flags: 'a'
+  });
+  app.use(morgan('combined', {
+    stream: writeStream
+  }));
+}
+
+
 
 // session 部分要在注册路由之前写，因为像bolg中需要用到 session中的数值
 app.keys = ['WJiol#23123_'] // 和express中配置session中的secret类似

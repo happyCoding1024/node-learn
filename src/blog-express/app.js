@@ -25,6 +25,7 @@ var app = express();
 //     stream: process.stdout
 //   }
 // ));
+// 日志
 const ENV = process.env.NODE_ENV;
 console.log('ENV', ENV);
 if (ENV !== 'production') {
